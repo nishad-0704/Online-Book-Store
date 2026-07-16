@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Online Book Store</title>
+        <style>
+            html {
+                font-size: 28px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            body {
+                background-color: #333;
+                margin: 0;
+                padding: 0;
+                background-image: url("html6.jpeg");
+                background-size: cover;
+            }
+            .my-list {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: rgb(42, 22, 97); text-align: center; font-size: 54px; font-family: 'Times New Roman', Times, serif;">Welcome to the Online Book Store</h1>
+        <p id="welcome-message" style="color: rgb(0, 0, 0); text-align: center; font-size: 40px; font-family: 'Times New Roman', Times, serif;">Discover your next great read!</p>
+        <p style="color: rgb(0, 0, 0); text-align: center; font-size: 32px; font-family: 'Times New Roman', Times, serif;">We offer a wide collection of books for students, professionals, and book lovers.<br> Browse our catalogue, register for an account, and enjoy a simple online book shopping experience.<br>Explore our collection of books across various genres and find your perfect match.</p>
+        <br>
+        <p style="color: rgb(0, 0, 0); text-align: left; font-size: 32px; font-family: 'Times New Roman', Times, serif;">To start your journey with us:</p>
+        <ol class="my-list">
+            <li><a style="color: blue; font-size: 28px;" href="register.html">Register To Our Platform</a></li>
+            <li><a style="color: blue; font-size: 28px;" href="login.html">Login to Your Account</a></li>
+            <li><a style="color: blue; font-size: 28px;" href="catalogue.html">View Books Catalogue</a></li>
+        </ol>
+        <h2>About Us : </h2>
+        <p style="color: rgb(0, 0, 0); text-align: left; font-size: 28px; font-family: 'Times New Roman', Times, serif;">
+           This Online Book Store is an online bookstore that provides a wide variety of books across different categories. Our aim is to make reading easy, affordable, and accessible for everyone.
+        </p>
+        <script>
+            const sessionData = JSON.parse(localStorage.getItem('bookstore_logged_in_user') || 'null');
+            const welcomeMessage = document.getElementById('welcome-message');
+            if (sessionData && welcomeMessage) {
+                welcomeMessage.textContent = 'Welcome back, ' + sessionData.username + '!';
+            }
+        </script>
+    </body>
+</html>

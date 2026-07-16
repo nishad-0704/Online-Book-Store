@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <style>
+            html {
+                font-size: 25px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            body {
+                background-color: #333;
+                margin: 0;
+                padding: 0;
+                background-image: url("html6.jpeg");
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: rgb(0, 0, 0); text-align: center; font-size: 32px; font-family: 'Times New Roman', Times, serif;">Login</h1>
+        <div id="message"></div>
+        <form onsubmit="handleLogin(event)" style="text-align: center;">
+            <label for="username" style="color: rgb(0, 0, 0);">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password" style="color: rgb(0, 0, 0);">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <script src="auth.js"></script>
+    </body>
+</html>
